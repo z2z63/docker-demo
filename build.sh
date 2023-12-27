@@ -4,6 +4,7 @@ mvn package
 cd ..
 
 cd BookManagerVue || exit
+npm install
 npm run build:prod
 cd ..
 
