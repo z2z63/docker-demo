@@ -1,0 +1,4 @@
+FROM openjdk:17
+COPY BookManager2/target/BookManagerApi-1.0.5.jar /usr/src/myapp/BookManagerApi-1.0.5.jar
+WORKDIR /usr/src/myapp
+CMD ["java", "-jar", "BookManagerApi-1.0.5.jar"]

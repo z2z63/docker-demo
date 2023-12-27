@@ -1,0 +1,2 @@
+FROM mysql
+COPY BookManager2/book_manager.sql /docker-entrypoint-initdb.d/

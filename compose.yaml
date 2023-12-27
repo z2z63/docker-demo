@@ -1,0 +1,24 @@
+services:
+  frontend:
+    image: frontend
+    container_name: frontend
+    ports: 
+      - 8000:8000
+  backend:
+    image: backend
+    container_name: backend
+  database:
+    image: database
+    container_name: database
+    environment:
+      - MYSQL_ROOT_PASSWORD=abc123
+      - MYSQL_DATABASE=book_manager
+    ports:
+      - 3307:3306
+    volumes:
+      - ./database:/var/lib/mysql
+  myredis:
+    image: myredis
+    container_name: myredis
+    # ports:
+    #   - 6379:6379
